@@ -69,16 +69,16 @@ pub fn generate_random_parameters<E, C, R>(
 
 /// This is our assembly structure that we'll use to synthesize the
 /// circuit into a QAP.
-struct KeypairAssembly<E: Engine> {
-    num_inputs: usize,
-    num_aux: usize,
-    num_constraints: usize,
-    at_inputs: Vec<Vec<(E::Fr, usize)>>,
-    bt_inputs: Vec<Vec<(E::Fr, usize)>>,
-    ct_inputs: Vec<Vec<(E::Fr, usize)>>,
-    at_aux: Vec<Vec<(E::Fr, usize)>>,
-    bt_aux: Vec<Vec<(E::Fr, usize)>>,
-    ct_aux: Vec<Vec<(E::Fr, usize)>>
+pub struct KeypairAssembly<E: Engine> {
+    pub num_inputs: usize,
+    pub num_aux: usize,
+    pub num_constraints: usize,
+    pub at_inputs: Vec<Vec<(E::Fr, usize)>>,
+    pub bt_inputs: Vec<Vec<(E::Fr, usize)>>,
+    pub ct_inputs: Vec<Vec<(E::Fr, usize)>>,
+    pub at_aux: Vec<Vec<(E::Fr, usize)>>,
+    pub bt_aux: Vec<Vec<(E::Fr, usize)>>,
+    pub ct_aux: Vec<Vec<(E::Fr, usize)>>
 }
 
 impl<E: Engine> ConstraintSystem<E> for KeypairAssembly<E> {
